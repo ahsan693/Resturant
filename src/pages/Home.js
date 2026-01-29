@@ -60,22 +60,23 @@ const Home = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
+            className="w-full"
           >
-            <p className="text-gold text-xs md:text-sm uppercase tracking-[0.2em] sm:tracking-[0.4em] mb-4 sm:mb-8 font-bold">
+            <p className="text-gold text-[10px] sm:text-xs md:text-sm uppercase tracking-[0.15em] sm:tracking-[0.25em] md:tracking-[0.4em] mb-4 sm:mb-6 md:mb-8 font-bold">
               SERVING SINCE 1996
             </p>
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 sm:mb-8 leading-tight px-4">
-              Delightful Experience
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 sm:mb-6 md:mb-8 leading-tight break-words">
+              Delightful<br className="sm:hidden" /> Experience
             </h1>
-            <p className="text-white/90 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
+            <p className="text-white/90 text-xs sm:text-sm md:text-base lg:text-lg max-w-xl mx-auto mb-8 sm:mb-10 md:mb-12 leading-relaxed px-2">
               A taste of perfection in every dish - fine dining with a modern twist.
             </p>
-            <a href="#menu" className="inline-block bg-gold hover:bg-gold-dark text-dark-900 px-6 sm:px-10 py-3 sm:py-4 font-bold text-xs sm:text-sm uppercase tracking-wider sm:tracking-widest transition-all duration-300 hover:shadow-gold">
+            <a href="#menu" className="inline-block bg-gold hover:bg-gold-dark text-dark-900 px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 font-bold text-[10px] sm:text-xs md:text-sm uppercase tracking-wide sm:tracking-wider md:tracking-widest transition-all duration-300 hover:shadow-gold">
               EXPLORE MENU
             </a>
           </motion.div>
@@ -295,8 +296,8 @@ const Home = () => {
                   transition={{ delay: index * 0.1 }}
                   className="group"
                 >
-                  <div className="flex gap-6 items-start">
-                    <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 border-4 border-gold/20 group-hover:border-gold transition-all duration-300">
+                  <div className="flex gap-3 sm:gap-4 md:gap-6 items-start">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full overflow-hidden flex-shrink-0 border-2 sm:border-3 md:border-4 border-gold/20 group-hover:border-gold transition-all duration-300">
                       <img
                         src={dish.image}
                         alt={dish.name}
@@ -306,22 +307,22 @@ const Home = () => {
                         }}
                       />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <div className="flex items-start justify-between mb-2">
-                        <div className="flex-1">
-                          <h3 className="font-display text-xl font-bold text-white group-hover:text-gold transition-colors uppercase mb-1">
+                        <div className="flex-1 min-w-0">
+                          <h3 className="font-display text-base sm:text-lg md:text-xl font-bold text-white group-hover:text-gold transition-colors uppercase mb-1 truncate sm:whitespace-normal">
                             {dish.name}
                             {index === 1 && (
-                              <span className="ml-3 bg-gold text-dark-900 px-2 py-1 text-xs font-bold">NEW</span>
+                              <span className="ml-2 sm:ml-3 bg-gold text-dark-900 px-1.5 sm:px-2 py-0.5 sm:py-1 text-[10px] sm:text-xs font-bold">NEW</span>
                             )}
                           </h3>
                         </div>
                       </div>
-                      <div className="flex items-center gap-3 mb-3">
+                      <div className="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
                         <div className="flex-1 border-b border-dotted border-gray-600"></div>
-                        <span className="text-gold font-bold text-xl">${dish.price.toFixed(2)}</span>
+                        <span className="text-gold font-bold text-base sm:text-lg md:text-xl">${dish.price.toFixed(2)}</span>
                       </div>
-                      <p className="text-gray-400 text-sm leading-relaxed">
+                      <p className="text-gray-400 text-xs sm:text-sm leading-relaxed line-clamp-2 sm:line-clamp-none">
                         {dish.description}
                       </p>
                     </div>
@@ -335,9 +336,9 @@ const Home = () => {
             )}
           </div>
 
-          <div className="text-center">
-            <p className="text-gray-400 mb-6 text-sm">During winter daily from 7:00 pm to 9:00 pm</p>
-            <button className="border-2 border-gold text-gold px-10 py-4 font-bold text-xs uppercase tracking-widest hover:bg-gold hover:text-dark-900 transition-all duration-300">
+          <div className="text-center px-4">
+            <p className="text-gray-400 mb-4 sm:mb-6 text-xs sm:text-sm">During winter daily from 7:00 pm to 9:00 pm</p>
+            <button className="border-2 border-gold text-gold px-6 sm:px-8 md:px-10 py-3 sm:py-4 font-bold text-[10px] sm:text-xs uppercase tracking-wider sm:tracking-widest hover:bg-gold hover:text-dark-900 transition-all duration-300">
               VIEW ALL MENU
             </button>
           </div>
@@ -345,19 +346,19 @@ const Home = () => {
       </section>
 
       {/* Why Dine With Us Section */}
-      <section className="py-24 bg-dark-800">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <p className="text-gold text-xs uppercase tracking-[0.4em] mb-6 font-bold">
+      <section className="py-12 sm:py-16 lg:py-24 bg-dark-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <p className="text-gold text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.4em] mb-4 sm:mb-6 font-bold">
               WHY CHOOSE US
             </p>
-            <h2 className="font-display text-5xl md:text-6xl font-bold text-white mb-16">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 sm:mb-12 lg:mb-16 px-4">
               Why Dine With Us
             </h2>
           </div>
 
           {/* Images Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 md:gap-8 mb-8 sm:mb-12 lg:mb-16">
             {[
               { image: 'https://images.unsplash.com/photo-1581299894007-aaa50297cf16?w=600&q=80', label: 'SKILLED CHEF' },
               { image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&q=80', label: 'HYGIENIC FOOD' },
@@ -372,15 +373,15 @@ const Home = () => {
                 transition={{ delay: index * 0.1 }}
                 className="group text-center"
               >
-                <div className="relative overflow-hidden rounded-lg mb-4 h-64">
+                <div className="relative overflow-hidden rounded-lg mb-3 sm:mb-4 h-40 sm:h-52 md:h-64">
                   <img
                     src={item.image}
                     alt={item.label}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-dark-900/90 to-transparent"></div>
-                  <div className="absolute bottom-6 left-0 right-0">
-                    <p className="text-white font-bold text-sm uppercase tracking-wider">{item.label}</p>
+                  <div className="absolute bottom-3 sm:bottom-4 md:bottom-6 left-0 right-0 px-2">
+                    <p className="text-white font-bold text-[10px] sm:text-xs md:text-sm uppercase tracking-wide sm:tracking-wider">{item.label}</p>
                   </div>
                 </div>
               </motion.div>
@@ -388,7 +389,7 @@ const Home = () => {
           </div>
 
           {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {stats.map((stat, index) => (
               <motion.div
                 key={index}
@@ -396,17 +397,17 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="text-center"
+                className="text-center px-4"
               >
-                <div className="mb-4">
-                  <span className="font-display text-5xl md:text-6xl font-bold text-gold">
+                <div className="mb-3 sm:mb-4">
+                  <span className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-gold">
                     {stat.number}
                   </span>
                 </div>
-                <h3 className="text-gold font-bold text-xs uppercase tracking-wider mb-3">
+                <h3 className="text-gold font-bold text-xs uppercase tracking-wider mb-2 sm:mb-3">
                   {stat.label}
                 </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
+                <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">
                   {stat.description}
                 </p>
               </motion.div>
@@ -416,18 +417,18 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-24 bg-elegant-cream">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <p className="text-gold text-xs uppercase tracking-[0.4em] mb-4 font-bold">
+      <section id="testimonials" className="py-12 sm:py-16 lg:py-24 bg-elegant-cream">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <p className="text-gold text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.4em] mb-3 sm:mb-4 font-bold">
               TESTIMONIALS
             </p>
-            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-dark-900">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-dark-900 px-4">
               What People Are Saying
             </h2>
           </div>
 
-          <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-elegant p-12">
+          <div className="max-w-4xl mx-auto bg-white rounded-lg shadow-elegant p-6 sm:p-8 md:p-12">
             <motion.div
               key={currentTestimonial}
               initial={{ opacity: 0, y: 20 }}

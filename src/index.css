@@ -20,6 +20,22 @@ body {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Prevent horizontal scroll on all devices */
+* {
+  max-width: 100%;
+}
+
+/* Fix for text overflow */
+.break-words {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 @layer components {
