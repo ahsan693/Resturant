@@ -60,22 +60,22 @@ const Home = () => {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-gold text-xs md:text-sm uppercase tracking-[0.4em] mb-8 font-bold">
+            <p className="text-gold text-xs md:text-sm uppercase tracking-[0.2em] sm:tracking-[0.4em] mb-4 sm:mb-8 font-bold">
               SERVING SINCE 1996
             </p>
-            <h1 className="font-display text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-4 sm:mb-8 leading-tight px-4">
               Delightful Experience
             </h1>
-            <p className="text-white/90 text-base md:text-lg max-w-2xl mx-auto mb-12 leading-relaxed">
+            <p className="text-white/90 text-sm sm:text-base md:text-lg max-w-2xl mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
               A taste of perfection in every dish - fine dining with a modern twist.
             </p>
-            <a href="#menu" className="inline-block bg-gold hover:bg-gold-dark text-dark-900 px-10 py-4 font-bold text-sm uppercase tracking-widest transition-all duration-300 hover:shadow-gold">
+            <a href="#menu" className="inline-block bg-gold hover:bg-gold-dark text-dark-900 px-6 sm:px-10 py-3 sm:py-4 font-bold text-xs sm:text-sm uppercase tracking-wider sm:tracking-widest transition-all duration-300 hover:shadow-gold">
               EXPLORE MENU
             </a>
           </motion.div>
@@ -83,11 +83,11 @@ const Home = () => {
       </div>
 
       {/* Menu Categories Section */}
-      <section className="py-24 bg-dark-800">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <p className="text-gold text-xs uppercase tracking-[0.4em] mb-6 font-bold flex items-center justify-center gap-4">
-              <span>✦</span> EXPLORE OUR DELICIOUS SELECTIONS <span>✦</span>
+      <section className="py-12 sm:py-16 lg:py-24 bg-dark-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <p className="text-gold text-xs uppercase tracking-[0.2em] sm:tracking-[0.4em] mb-6 font-bold flex items-center justify-center gap-2 sm:gap-4">
+              <span>✦</span> <span className="text-center">EXPLORE OUR DELICIOUS SELECTIONS</span> <span>✦</span>
             </p>
           </div>
 
@@ -111,24 +111,24 @@ const Home = () => {
                     setSelectedCategory(item.category);
                     document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth' });
                   }}
-                  className="w-full flex items-center justify-between py-8 hover:bg-dark-700 transition-all duration-300 px-6"
+                  className="w-full flex items-center justify-between py-4 sm:py-6 lg:py-8 hover:bg-dark-700 transition-all duration-300 px-3 sm:px-6"
                 >
-                  <div className="flex items-center gap-8">
-                    <div className="w-32 h-32 rounded-full overflow-hidden flex-shrink-0">
+                  <div className="flex items-center gap-3 sm:gap-6 lg:gap-8">
+                    <div className="w-16 h-16 sm:w-24 sm:h-24 lg:w-32 lg:h-32 rounded-full overflow-hidden flex-shrink-0">
                       <img
                         src={item.image}
                         alt={item.name}
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                     </div>
-                    <h3 className="font-display text-4xl md:text-5xl font-bold text-white group-hover:text-gold transition-colors">
+                    <h3 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white group-hover:text-gold transition-colors">
                       {item.name}
                     </h3>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-gold text-2xl">✦</span>
-                    <div className="w-14 h-14 rounded-full border-2 border-gray-600 group-hover:border-gold flex items-center justify-center transition-all">
-                      <svg className="w-6 h-6 text-gray-400 group-hover:text-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="flex items-center gap-1 sm:gap-2">
+                    <span className="text-gold text-sm sm:text-xl lg:text-2xl hidden sm:inline">✦</span>
+                    <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-full border-2 border-gray-600 group-hover:border-gold flex items-center justify-center transition-all">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-gray-400 group-hover:text-gold transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </div>
@@ -142,30 +142,30 @@ const Home = () => {
 
       {/* Special Dishes Section */}
       <section className="py-0">
-        <div className="grid md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left - Food Image */}
-          <div className="bg-dark-900 flex items-center justify-center p-16">
+          <div className="bg-dark-900 flex items-center justify-center p-8 sm:p-12 lg:p-16 min-h-[400px]">
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               className="relative"
             >
-              <div className="w-80 h-80 rounded-full overflow-hidden border-8 border-gold/20">
+              <div className="w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden border-4 sm:border-6 lg:border-8 border-gold/20">
                 <img
                   src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=800&q=80"
                   alt="Special Dish"
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gold rounded-full flex items-center justify-center">
-                <span className="text-dark-900 font-display text-3xl font-bold">$12</span>
+              <div className="absolute -bottom-3 -right-3 sm:-bottom-4 sm:-right-4 w-20 h-20 sm:w-24 sm:h-24 bg-gold rounded-full flex items-center justify-center">
+                <span className="text-dark-900 font-display text-2xl sm:text-3xl font-bold">$12</span>
               </div>
             </motion.div>
           </div>
 
           {/* Right - Dining Image & Text */}
-          <div className="relative">
+          <div className="relative min-h-[400px]">
             <div 
               className="absolute inset-0 bg-cover bg-center"
               style={{
@@ -174,15 +174,15 @@ const Home = () => {
             >
               <div className="absolute inset-0 bg-dark-900/60"></div>
             </div>
-            <div className="relative z-10 flex items-center justify-center h-full p-16">
+            <div className="relative z-10 flex items-center justify-center h-full p-8 sm:p-12 lg:p-16">
               <div className="text-center">
                 <div className="mb-8">
-                  <div className="inline-block px-6 py-2 border border-gold/50 mb-6">
-                    <p className="text-gold text-xs uppercase tracking-[0.3em] font-bold">
+                  <div className="inline-block px-4 sm:px-6 py-2 border border-gold/50 mb-6">
+                    <p className="text-gold text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] font-bold">
                       Special Dishes
                     </p>
                   </div>
-                  <h2 className="font-display text-6xl font-bold text-white mb-4 transform -rotate-90 origin-center whitespace-nowrap absolute left-0 top-1/2 -translate-y-1/2">
+                  <h2 className="font-display text-3xl sm:text-4xl lg:text-6xl font-bold text-white mb-4 hidden md:block">
                     Special Dishes
                   </h2>
                 </div>
@@ -194,9 +194,9 @@ const Home = () => {
 
       {/* Chef Section */}
       <section className="py-0">
-        <div className="grid md:grid-cols-2">
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {/* Left - Chef Image */}
-          <div className="relative h-[600px]">
+          <div className="relative h-[400px] md:h-[600px]">
             <div 
               className="absolute inset-0 bg-cover bg-center"
               style={{
@@ -206,7 +206,7 @@ const Home = () => {
           </div>
 
           {/* Right - Chef Info */}
-          <div className="bg-dark-800 flex items-center justify-center p-16">
+          <div className="bg-dark-800 flex items-center justify-center p-8 sm:p-12 lg:p-16">
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -214,7 +214,7 @@ const Home = () => {
               className="text-center max-w-lg"
             >
               <div className="mb-8">
-                <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-gold mx-auto mb-6">
+                <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden border-4 border-gold mx-auto mb-6">
                   <img
                     src="https://i.pravatar.cc/200?img=12"
                     alt="Chef Lorenzo"
@@ -222,16 +222,16 @@ const Home = () => {
                   />
                 </div>
               </div>
-              <p className="text-gold text-xs uppercase tracking-[0.3em] mb-4 font-bold flex items-center justify-center gap-2">
+              <p className="text-gold text-xs uppercase tracking-[0.2em] sm:tracking-[0.3em] mb-4 font-bold flex items-center justify-center gap-2">
                 <span>✦</span> OUR CHEF <span>✦</span>
               </p>
-              <h2 className="font-display text-5xl font-bold text-white mb-6">
+              <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Chef Lorenzo
               </h2>
-              <p className="text-gray-300 leading-relaxed mb-8">
+              <p className="text-gray-300 text-sm sm:text-base leading-relaxed mb-8">
                 A fine dine master chef crafts exquisite cuisine with precision, passion, creativity, and elegance, delivering unforgettable culinary experiences and refined flavors.
               </p>
-              <button className="border-2 border-gold text-gold px-8 py-3 font-bold text-xs uppercase tracking-widest hover:bg-gold hover:text-dark-900 transition-all duration-300">
+              <button className="border-2 border-gold text-gold px-6 sm:px-8 py-2 sm:py-3 font-bold text-xs uppercase tracking-widest hover:bg-gold hover:text-dark-900 transition-all duration-300">
                 MEET OUR TEAM
               </button>
             </motion.div>
@@ -240,32 +240,32 @@ const Home = () => {
       </section>
 
       {/* Delicious Menu Section */}
-      <section id="menu" className="py-24 bg-dark-900">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <p className="text-gold text-xs uppercase tracking-[0.4em] mb-6 font-bold flex items-center justify-center gap-4">
+      <section id="menu" className="py-12 sm:py-16 lg:py-24 bg-dark-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+            <p className="text-gold text-xs uppercase tracking-[0.2em] sm:tracking-[0.4em] mb-6 font-bold flex items-center justify-center gap-2 sm:gap-4">
               <span>✦</span> SPECIAL FINE DINE <span>✦</span>
             </p>
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-6 sm:mb-8">
               <div className="relative">
-                <svg className="w-16 h-16 text-gold" fill="currentColor" viewBox="0 0 20 20">
+                <svg className="w-12 h-12 sm:w-16 sm:h-16 text-gold" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                   <path fillRule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clipRule="evenodd"/>
                 </svg>
               </div>
             </div>
-            <h2 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+            <h2 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4">
               Delicious Menu
             </h2>
           </div>
 
           {/* Category Tabs */}
-          <div className="flex justify-center gap-12 mb-16 border-b border-gray-700">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16 border-b border-gray-700 overflow-x-auto pb-2">
             {categories.map((category) => (
               <button
                 key={category.value}
                 onClick={() => setSelectedCategory(category.value)}
-                className={`px-6 py-4 font-bold uppercase tracking-wider text-sm transition-all duration-300 relative ${
+                className={`px-3 sm:px-6 py-3 sm:py-4 font-bold uppercase tracking-wider text-xs sm:text-sm transition-all duration-300 relative whitespace-nowrap ${
                   selectedCategory === category.value
                     ? 'text-gold'
                     : 'text-gray-400 hover:text-gold'
@@ -278,13 +278,13 @@ const Home = () => {
                     className="absolute bottom-0 left-0 right-0 h-0.5 bg-gold"
                   />
                 )}
-                <span className="ml-2 text-gold">✦</span>
+                <span className="ml-1 sm:ml-2 text-gold">✦</span>
               </button>
             ))}
           </div>
 
           {/* Menu Items Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12 lg:mb-16">
             {filteredDishes.length > 0 ? (
               filteredDishes.map((dish, index) => (
                 <motion.div
