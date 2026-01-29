@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold text-dark-900 px-8 py-4 font-semibold hover:bg-gold-dark transition-all duration-300 hover:shadow-gold uppercase tracking-wider text-sm;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-gold text-gold px-8 py-4 font-semibold hover:bg-gold hover:text-dark-900 transition-all duration-300 uppercase tracking-wider text-sm;
+  }
+  
+  .card {
+    @apply bg-white overflow-hidden transition-all duration-300 hover:shadow-elegant-lg;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-3 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gold focus:border-transparent transition-all bg-white;
+  }
+  
+  .badge {
+    @apply inline-block px-3 py-1 text-xs font-medium uppercase tracking-wide;
+  }
+  
+  .badge-success {
+    @apply badge bg-green-100 text-green-700;
+  }
+  
+  .badge-warning {
+    @apply badge bg-yellow-100 text-yellow-700;
+  }
+  
+  .badge-danger {
+    @apply badge bg-red-100 text-red-700;
+  }
+  
+  .section-title {
+    @apply font-display text-4xl md:text-5xl lg:text-6xl font-bold text-dark-900 mb-4;
+  }
+  
+  .section-subtitle {
+    @apply text-gold text-sm uppercase tracking-widest mb-2 font-semibold;
+  }
+  
+  .divider {
+    @apply w-20 h-1 bg-gold mx-auto my-6;
+  }
+}
