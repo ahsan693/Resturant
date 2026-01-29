@@ -5,7 +5,7 @@ import { useToast } from '../context/ToastContext';
 import { formatPrice } from '../utils/helpers';
 
 const MenuManagement = () => {
-  const { dishes, toggleAvailability, updateDishPrice, updateDish } = useMenu();
+  const { dishes, toggleAvailability, updateDishPrice } = useMenu();
   const { showToast } = useToast();
   const [editingId, setEditingId] = useState(null);
   const [editPrice, setEditPrice] = useState('');

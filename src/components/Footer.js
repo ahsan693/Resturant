@@ -23,7 +23,9 @@ const Footer = () => {
             {/* Social Media */}
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-dark-800 hover:bg-gold flex items-center justify-center transition-colors duration-300 group"
                 aria-label="Facebook"
               >
@@ -32,7 +34,9 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-dark-800 hover:bg-gold flex items-center justify-center transition-colors duration-300 group"
                 aria-label="Instagram"
               >
@@ -41,7 +45,9 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-dark-800 hover:bg-gold flex items-center justify-center transition-colors duration-300 group"
                 aria-label="Twitter"
               >
@@ -50,7 +56,9 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="#"
+                href="https://youtube.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 bg-dark-800 hover:bg-gold flex items-center justify-center transition-colors duration-300 group"
                 aria-label="YouTube"
               >

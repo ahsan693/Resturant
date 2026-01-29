@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
 const Navbar = () => {
   const { getCartCount } = useCart();
   const cartCount = getCartCount();
-  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

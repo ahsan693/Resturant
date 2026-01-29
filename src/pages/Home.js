@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useMenu } from '../context/MenuContext';
-import DishCard from '../components/DishCard';
 
 const Home = () => {
   const { dishes } = useMenu();
